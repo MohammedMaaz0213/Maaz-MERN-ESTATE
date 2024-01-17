@@ -1,7 +1,7 @@
 import { setRef } from "@material-ui/core";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import OAuth from "../components/oAuth";
+import OAuth from "../components/OAuth";
 
 export default function SignUp() {
   const navigate = useNavigate();
