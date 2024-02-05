@@ -13,6 +13,7 @@ export default function Contact({ listing }) {
       try {
         const res = await fetch(`/api/user/${listing.userRef}`);
         const data = await res.json();
+        console.log(data, "is hererere");
         setLandlord(data);
       } catch (error) {
         console.log(error);
@@ -40,7 +41,7 @@ export default function Contact({ listing }) {
           ></textarea>
 
           <Link
-            to={`mailto:mohammed.maaz0213@gmail.com?subject=Regarding maaza&body=msg`}
+            to={`mailto:${landlord.email}?subject=Regarding ${listing.name}&body=${message}`}
             className="bg-slate-700 text-white text-center p-3 uppercase rounded-lg hover:opacity-95"
           >
             Send Message
